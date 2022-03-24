@@ -16,6 +16,14 @@ function openClose(id) {
     }
 }
 
+function updateDescription(text) {
+    let el = document.getElementsByClassName('description-wrap');
+    if (typeof el[0].innerText !== 'undefined') {
+        el[0].innerText = text;
+    } else {
+        el[0].textContent = text;
+    }
+}
 function swichDisplay(obj) {
     if(obj.style.display === 'none'){
         obj.style.display = '';
